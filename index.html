@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content-container">
+        <div class="display-container">
+            <div id="heading">
+                <h3>web calc</h3>
+                <h5>version 1.0</h5>
+            </div>
+            <input id="display" type="text" disabled>
+        </div>
+        <div class="numeric-container">
+            <div class="number-cells">
+                <div class="cell special-cells" onclick="allClear()">clear</div>
+                <div class="cell special-cells" onclick="mainFun('(')">(</div>
+                <div class="cell special-cells" onclick="mainFun(')')">)</div>
+                <div class="cell del-key" onclick="mainFun('d')">del</div>
+                <div class="cell special-cells" onclick="mainFun('**')">(a)<sup>b</sup></div>
+                <div class="cell special-cells" onclick="mainFun('%')">%</div>
+                <div class="cell special-cells" onclick="mainFun('/')">/</div>
+                <div class="cell special-cells" onclick="mainFun('*')">x</div>
+                <div class="cell" onclick="mainFun('7')">7</div>
+                <div class="cell" onclick="mainFun('8')">8</div>
+                <div class="cell" onclick="mainFun('9')">9</div>
+                <div class="cell special-cells" onclick="mainFun('-')">-</div>
+                <div class="cell" onclick="mainFun('4')">4</div>
+                <div class="cell" onclick="mainFun('5')">5</div>
+                <div class="cell" onclick="mainFun('6')">6</div>
+                <div class="cell special-cells" onclick="mainFun('+')">+</div>
+                <div class="cell" onclick="mainFun('1')">1</div>
+                <div class="cell" onclick="mainFun('2')">2</div>
+                <div class="cell" onclick="mainFun('3')">3</div>
+                <div class="cell" id="eq-cell" onclick="result()">=</div>
+                <div class="cell" onclick="mainFun('00')">00</div>
+                <div class="cell" onclick="mainFun('0')">0</div>
+                <div class="cell" onclick="mainFun('.')">.</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

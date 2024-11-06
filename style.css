@@ -1,0 +1,118 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: #fff;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+.content-container{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    background-color:#2E2E2E;
+    border-radius: 20px;
+    row-gap: 1rem;
+}
+.display-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+}
+#heading{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(250, 222, 111);
+    text-transform: uppercase;
+}
+#display{
+    width: 25vw;
+    min-height: 8vh;
+    font-size: 2rem;
+    background-color: #000000;
+    color: #FFD966;
+    text-align: right;
+}
+.numeric-container{
+    display: flex;
+    padding: 1.5rem 0rem;
+    justify-content: center;
+}
+.number-cells{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(6,1fr);
+    width: auto;
+    height: auto;
+    gap: 0.6rem 0.8rem;
+    justify-content: center;
+}
+.cell{
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    background-color: #4A4A4A;
+    color: #E0E0E0;
+    cursor: pointer;
+}
+.cell:active{
+    background-color: #3A3A3A;
+}
+#eq-cell{
+    grid-row-start:5;
+    grid-row-end: 7;
+    grid-column-end: 5;
+    align-content: center;
+    background-color: #F7B500;
+    font-size: 1.5rem;
+}
+#eq-cell:active{
+    background-color: #D69A00;
+}
+.special-cells{
+    background-color: #666666;
+    font-size: 1.2rem;
+}
+.special-cells:active{
+    background-color: #555555;
+}
+.del-key{
+    background-color: #D9534F;
+}
+.del-key:active{
+    background-color: #C2473F;
+}
+
+@media screen and (max-width:980px){
+    .display-container{
+        text-align: center;
+    }
+    #display{
+        width: 98%;
+    }
+    .cell-container{
+        padding: 2rem 1.5rem;
+    }
+    .content-container{
+        padding: 1.5rem 0.5rem;
+    }
+}
+@media screen and (max-width:450px){
+    #display{
+        width: 80vw;
+    }
+    .cell{
+        padding: 0.8rem 1rem;
+    }
+    .content-container{
+        padding: 1.5rem 0.5rem;
+    }
+}
